@@ -1,0 +1,6 @@
+{
+  "name": "TwinEngine AI",
+  "description": "실시간 코호트 궤적, 3차원 성장 평가, 다차원 역량 분석 및 맞춤형 커리큘럼 추천을 제공하는 차세대 디지털 트윈 교육 시뮬레이션 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
