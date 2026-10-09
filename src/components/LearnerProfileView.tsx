@@ -12,6 +12,7 @@ import { DynamicRadarChart } from './learner/DynamicRadarChart';
 import { WeeklyGrowthChart } from './learner/WeeklyGrowthChart';
 import { WeeklyGrowthFolderCard } from './learner/WeeklyGrowthFolderCard';
 import { KeyLearningMomentsSection } from './learner/KeyLearningMomentsSection';
+import { AchievementComparisonCard } from './AchievementComparisonCard';
 import {
   Sparkles,
   Zap,
@@ -860,6 +861,18 @@ export const LearnerProfileView: React.FC<LearnerProfileViewProps> = ({
           </button>
         </div>
       )}
+
+      <AchievementComparisonCard
+        preScore={student.initialAchievement ?? student.cognitiveLoad ?? 0}
+        postScore={student.finalGrowth ?? 0}
+        onSave={({ preScore, postScore }) =>
+          notifyStudentUpdate({
+            initialAchievement: preScore,
+            cognitiveLoad: preScore,
+            finalGrowth: postScore,
+          })
+        }
+      />
 
       {/* 2-Column Responsive Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
